@@ -11,7 +11,7 @@ aplikasi, tangkapan layar, dan cara pasang.
 
 | Berkas | Keterangan |
 |---|---|
-| `index.html` | satu halaman, bahasa Indonesia |
+| `index.html` | satu halaman, bahasa Indonesia (versi 0.50.0) |
 | `styles.css` | gaya halaman + stempel Hallmark (tema Terrazzo) |
 | `tokens.css`, `base.css` | token tema dan aturan dasar dari scaffold |
 | `fonts.css`, `assets/fonts/` | Syne 700, Onest 400/500, JetBrains Mono 500 (latin, self-hosted) |
