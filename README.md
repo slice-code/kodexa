@@ -16,7 +16,7 @@ aplikasi, tangkapan layar, dan cara pasang.
 | `tokens.css`, `base.css` | token tema dan aturan dasar dari scaffold |
 | `fonts.css`, `assets/fonts/` | Syne 700, Onest 400/500, JetBrains Mono 500 (latin, self-hosted) |
 | `assets/img/` | tangkapan layar asli aplikasi (webp) + ikon |
-| `LICENSE`, `NOTICE` | Apache-2.0, atribusi pihak ketiga |
+| `LICENSE.txt`, `NOTICE.txt` | Apache-2.0, atribusi pihak ketiga |
 
 ## Memperbarui
 
