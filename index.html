@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kodexa, IDE JavaScript di Android</title>
+<meta name="description" content="Tulis JavaScript di HP dan jalankan sebagai UI aplikasi. Editor, runtime WebView, agent AI, dan builder APK dalam satu aplikasi Android.">
+<link rel="icon" href="./favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="./assets/img/icon-192.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Kodexa, IDE JavaScript di Android">
+<meta property="og:description" content="Editor, runtime WebView, agent AI, dan builder APK dalam satu aplikasi Android.">
+<meta property="og:url" content="https://slice-code.github.io/kodexa/">
+<meta property="og:image" content="https://slice-code.github.io/kodexa/assets/img/editor.webp">
+<link rel="stylesheet" href="./fonts.css">
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+<a class="skip" href="#isi">Lewati ke isi</a>
+
+<header class="nav">
+  <div class="container nav__inner">
+    <a class="brand" href="./" aria-label="Kodexa, ke beranda">
+      <img class="brand__mark" src="./assets/img/icon-192.png" width="28" height="28" alt="">
+      <span>Kodexa</span>
+    </a>
+    <nav class="nav__links" aria-label="Navigasi utama">
+      <a href="#isi">Isi</a>
+      <a href="#pasang">Pasang</a>
+      <a class="btn btn--outline" href="#unduh">Unduh APK</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="container hero__inner">
+      <div class="hero__text">
+        <h1>Tulis JavaScript, jadi aplikasi Android.</h1>
+        <p class="lead">IDE di HP: editor, runtime WebView, dan builder APK.</p>
+        <p class="hero__actions">
+          <a class="btn btn--primary" href="#unduh">Unduh APK</a>
+          <a class="btn btn--outline" href="#pasang">Cara pasang</a>
+        </p>
+      </div>
+      <figure class="hero__media">
+        <img src="./assets/img/editor.webp" width="800" height="620" alt="Editor Kodexa membuka proyek Hello dengan skrip main.js, 22 baris" fetchpriority="high">
+        <figcaption>main.js, proyek Hello, dibuka di editor.</figcaption>
+      </figure>
+    </div>
+    <div class="container">
+      <dl class="specstrip">
+        <div><dt>Versi</dt><dd>0.48.0</dd></div>
+        <div><dt>Ukuran</dt><dd>5,4 MB</dd></div>
+        <div><dt>Android</dt><dd>8.0 ke atas</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="spec" id="isi">
+    <div class="container">
+      <div class="head">
+        <h2>Isi aplikasinya</h2>
+        <p class="lead">Angka dari build 0.48.0, tanpa paket tambahan.</p>
+      </div>
+      <table class="spec-table">
+        <thead>
+          <tr><th scope="col">Bagian</th><th scope="col">Isi</th><th scope="col">Angka</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="code">UI</td>
+            <td>Kontrol layar: layout, teks, tombol, list, WebView</td>
+            <td>12 kontrol, 26 metode</td>
+          </tr>
+          <tr>
+            <td class="code">app.*</td>
+            <td>Layar, berkas, izin runtime, dialog, intent, clipboard</td>
+            <td>39 method</td>
+          </tr>
+          <tr>
+            <td class="code">runtime</td>
+            <td>Native JS, WebView dengan HTML, atau Python lewat Brython</td>
+            <td>3 pilihan</td>
+          </tr>
+          <tr>
+            <td class="code">wifi ide</td>
+            <td>Server HTTPS dan WebSocket di HP, dibuka dari browser laptop</td>
+            <td>port 8088</td>
+          </tr>
+          <tr>
+            <td class="code">builder</td>
+            <td>Repack, patch manifest, tanda tangan v1 dan v2</td>
+            <td>1 APK</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="shots">
+    <div class="container">
+      <div class="head">
+        <h2>Agent dan builder</h2>
+        <p class="lead">Dua hal yang dipakai setelah editor.</p>
+      </div>
+      <div class="shots__grid">
+        <figure class="shot shot--a">
+          <img src="./assets/img/agent.webp" width="800" height="1000" alt="Panel agent di Kodexa menampilkan tool read_file dan daftar temuan bug pada main.js" loading="lazy">
+          <figcaption>Agent membaca AGENTS.md, lalu menandai sepuluh temuan di main.js.</figcaption>
+        </figure>
+        <figure class="shot shot--b">
+          <img src="./assets/img/komponen.webp" width="1340" height="800" alt="Aplikasi Komponen berjalan dengan tab, kartu, dan navigasi bawah" loading="lazy">
+          <figcaption>Komponen, aplikasi hasil builder, dipasang dari APK-nya sendiri.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="api">
+    <div class="container api__inner">
+      <div class="api__text">
+        <h2>API DroidScript yang sama</h2>
+        <p>Objek global <code>app</code>, seperti skrip DroidScript.</p>
+      </div>
+      <figure class="card-code">
+        <pre><code>function OnStart() {
+  lay = app.CreateLayout("linear", "FillXY,Vcenter")
+  txt = app.CreateText("Halo dari Kodexa", 0.9, -1)
+  btn = app.CreateButton("Tekan saya", 0.6, -1)
+  btn.SetOnTouch(btn_OnTouch)
+  lay.AddChild(txt)
+  lay.AddChild(btn)
+  app.AddLayout(lay)
+}</code></pre>
+        <figcaption>main.js</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="install" id="pasang">
+    <div class="container">
+      <div class="head">
+        <h2>Pasang dari berkas APK</h2>
+      </div>
+      <ol class="steps">
+        <li>
+          <h3>Unduh berkasnya</h3>
+          <p>Tombol unduh menyimpan <code>kodexa-0.48.0.apk</code> ke folder Unduhan.</p>
+        </li>
+        <li>
+          <h3>Izinkan pemasangan</h3>
+          <p>Android meminta izin sumber tidak dikenal; Kodexa memandu lewat dialog.</p>
+        </li>
+        <li>
+          <h3>Buka dan jalankan</h3>
+          <p>Proyek contoh sudah ada. Tekan Run untuk menjalankan skrip di layar penuh.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="download" id="unduh">
+    <div class="container download__inner">
+      <div>
+        <h2>Unduh Kodexa 0.48.0</h2>
+        <p class="download__line">APK release untuk Android 8.0 ke atas. Pemasangan dari berkas, bukan dari Play Store.</p>
+      </div>
+      <a class="btn btn--primary" href="https://github.com/slice-code/kodexa/releases/download/v0.48.0/kodexa-0.48.0.apk">Unduh APK</a>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="container foot__inner">
+    <a class="brand" href="./" aria-label="Kodexa, ke beranda">
+      <img class="brand__mark" src="./assets/img/icon-192.png" width="24" height="24" alt="">
+      <span>Kodexa</span>
+    </a>
+    <p class="foot__line">IDE JavaScript untuk Android. Lisensi Apache-2.0, diuji di Android 14.</p>
+    <nav class="foot__links" aria-label="Tautan lain">
+      <a href="https://github.com/slice-code/kodexa/releases">Rilis</a>
+      <a href="./LICENSE">Lisensi</a>
+    </nav>
+  </div>
+</footer>
+</body>
+</html>

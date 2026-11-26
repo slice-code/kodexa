@@ -1,0 +1,13 @@
+Kodexa
+Copyright 2026 Gugus
+
+Produk ini berlisensi Apache License 2.0 (lihat LICENSE).
+
+Karya pihak ketiga:
+- DroidScript — sebagian ide protokol `app.*` dan kompatibilitas API, Apache License 2.0.
+  https://github.com/DroidScript
+- Brython — runtime Python di browser, BSD 3-Clause (app/src/main/assets/sys/brython/).
+- AndroidX, Jetpack Compose, Kotlin — Apache License 2.0.
+- BouncyCastle — MIT-style (digunakan lewat apksig untuk penandatanganan APK).
+
+Berkas di app/src/main/assets/sys/brython/ mempertahankan lisensi aslinya.
